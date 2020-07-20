@@ -46,3 +46,6 @@ Route::put('author/edit/{id}', 'authorController@update')->name('author.update')
 Route::delete('author/delete/{id}', 'authorController@destroy')->name('author.destroy');
 
 
+
+
+Route::get('books/create', 'BooksController@create')->name('book.create');
