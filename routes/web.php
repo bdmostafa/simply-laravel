@@ -48,4 +48,12 @@ Route::delete('author/delete/{id}', 'authorController@destroy')->name('author.de
 
 
 
-Route::get('books/create', 'BooksController@create')->name('book.create');
+
+
+// Books Routes
+Route::get('books', 'BookController@index')->name('book.index');
+Route::get('book/create', 'BookController@create')->name('book.create');
+Route::post('book/create', 'BookController@store')->name('book.store');
+Route::get('book/{id}/edit', 'BookController@edit')->name('book.edit');
+Route::put('book/{id}/edit', 'BookController@update')->name('book.update');
+Route::delete('book/{id}', 'BookController@delete')->name('book.delete');
